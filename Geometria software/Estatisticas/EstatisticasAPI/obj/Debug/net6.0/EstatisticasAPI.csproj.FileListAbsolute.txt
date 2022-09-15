@@ -1,0 +1,7 @@
+C:\Users\android\Desktop\david\Estatisticas\EstatisticasAPI\obj\Debug\net6.0\EstatisticasAPI.csproj.AssemblyReference.cache
+C:\Users\android\Desktop\david\Estatisticas\EstatisticasAPI\obj\Debug\net6.0\EstatisticasAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\android\Desktop\david\Estatisticas\EstatisticasAPI\obj\Debug\net6.0\EstatisticasAPI.AssemblyInfoInputs.cache
+C:\Users\android\Desktop\david\Estatisticas\EstatisticasAPI\obj\Debug\net6.0\EstatisticasAPI.AssemblyInfo.cs
+C:\Users\android\Desktop\david\Estatisticas\EstatisticasAPI\obj\Debug\net6.0\EstatisticasAPI.csproj.CoreCompileInputs.cache
+C:\Users\android\Desktop\david\Estatisticas\EstatisticasAPI\obj\Debug\net6.0\EstatisticasAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\android\Desktop\david\Estatisticas\EstatisticasAPI\obj\Debug\net6.0\EstatisticasAPI.MvcApplicationPartsAssemblyInfo.cache

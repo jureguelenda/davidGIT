@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="carrosTeslaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'carrosTesla.dbo.Modelo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Modelo">
+    <Key>
+      <PropertyRef Name="ANO" />
+      <PropertyRef Name="DESCRICAO" />
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="ANO" Type="int" Nullable="false" />
+    <Property Name="DESCRICAO" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CODIGO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Veiculo">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRICAO" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="VALOR" Type="int" Nullable="false" />
+    <Property Name="CODIGMODELO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="carrosTeslaModelStoreContainer">
+    <EntitySet Name="Veiculo" EntityType="Self.Veiculo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modelo" EntityType="Self.Modelo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Modelo].[ANO] AS [ANO], 
+[Modelo].[DESCRICAO] AS [DESCRICAO], 
+[Modelo].[CODIGO] AS [CODIGO]
+FROM [dbo].[Modelo] AS [Modelo]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

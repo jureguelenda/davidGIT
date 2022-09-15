@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TdsAlmoxarifadoModelStoreContainer" CdmEntityContainer="BDTdsAlmoxarifado">
+    <EntitySetMapping Name="AREA">
+      <EntityTypeMapping TypeName="TdsAlmoxarifadoModel.AREA">
+        <MappingFragment StoreEntitySet="AREA">
+          <ScalarProperty Name="AREID" ColumnName="AREID" />
+          <ScalarProperty Name="ARESDESCRICAO" ColumnName="ARESDESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COLABORADOR">
+      <EntityTypeMapping TypeName="TdsAlmoxarifadoModel.COLABORADOR">
+        <MappingFragment StoreEntitySet="COLABORADOR">
+          <ScalarProperty Name="COLID" ColumnName="COLID" />
+          <ScalarProperty Name="COLNOME" ColumnName="COLNOME" />
+          <ScalarProperty Name="COLCARGO" ColumnName="COLCARGO" />
+          <ScalarProperty Name="AREID" ColumnName="AREID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTRADA">
+      <EntityTypeMapping TypeName="TdsAlmoxarifadoModel.ENTRADA">
+        <MappingFragment StoreEntitySet="ENTRADA">
+          <ScalarProperty Name="ENTID" ColumnName="ENTID" />
+          <ScalarProperty Name="ENTDATA" ColumnName="ENTDATA" />
+          <ScalarProperty Name="ENTORIGEM" ColumnName="ENTORIGEM" />
+          <ScalarProperty Name="ENTNUMERONOTA" ColumnName="ENTNUMERONOTA" />
+          <ScalarProperty Name="ENTOBSERVACAO" ColumnName="ENTOBSERVACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITENSENTRADA">
+      <EntityTypeMapping TypeName="TdsAlmoxarifadoModel.ITENSENTRADA">
+        <MappingFragment StoreEntitySet="ITENSENTRADA">
+          <ScalarProperty Name="ITEID" ColumnName="ITEID" />
+          <ScalarProperty Name="ITEQUANTIDADE" ColumnName="ITEQUANTIDADE" />
+          <ScalarProperty Name="ITEPRECO" ColumnName="ITEPRECO" />
+          <ScalarProperty Name="ITETOTAL" ColumnName="ITETOTAL" />
+          <ScalarProperty Name="ENTID" ColumnName="ENTID" />
+          <ScalarProperty Name="PROID" ColumnName="PROID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITENSSAIDA">
+      <EntityTypeMapping TypeName="TdsAlmoxarifadoModel.ITENSSAIDA">
+        <MappingFragment StoreEntitySet="ITENSSAIDA">
+          <ScalarProperty Name="ITSID" ColumnName="ITSID" />
+          <ScalarProperty Name="ITSQUANTIDADE" ColumnName="ITSQUANTIDADE" />
+          <ScalarProperty Name="SAIID" ColumnName="SAIID" />
+          <ScalarProperty Name="PROID" ColumnName="PROID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUTO">
+      <EntityTypeMapping TypeName="TdsAlmoxarifadoModel.PRODUTO">
+        <MappingFragment StoreEntitySet="PRODUTO">
+          <ScalarProperty Name="PROID" ColumnName="PROID" />
+          <ScalarProperty Name="PRODESCRICAO" ColumnName="PRODESCRICAO" />
+          <ScalarProperty Name="PROMINIMO" ColumnName="PROMINIMO" />
+          <ScalarProperty Name="PROMAXIMO" ColumnName="PROMAXIMO" />
+          <ScalarProperty Name="PROESTOQUE" ColumnName="PROESTOQUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAIDA">
+      <EntityTypeMapping TypeName="TdsAlmoxarifadoModel.SAIDA">
+        <MappingFragment StoreEntitySet="SAIDA">
+          <ScalarProperty Name="SAIID" ColumnName="SAIID" />
+          <ScalarProperty Name="SAIDATA" ColumnName="SAIDATA" />
+          <ScalarProperty Name="SAIOBSERVACAO" ColumnName="SAIOBSERVACAO" />
+          <ScalarProperty Name="COLID" ColumnName="COLID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

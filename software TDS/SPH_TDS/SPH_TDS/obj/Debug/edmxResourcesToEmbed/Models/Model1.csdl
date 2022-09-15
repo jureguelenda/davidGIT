@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDSENAITDSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PROFESSOR">
+    <Key>
+      <PropertyRef Name="PROFID" />
+    </Key>
+    <Property Name="PROFID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PROFNOME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TURID" Type="Int32" />
+    <NavigationProperty Name="Turno" Relationship="Self.FK__PROFESSOR__TURID__267ABA7A" FromRole="PROFESSOR" ToRole="Turno" />
+  </EntityType>
+  <EntityType Name="Turno">
+    <Key>
+      <PropertyRef Name="TURID" />
+    </Key>
+    <Property Name="TURID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TURDESCRICAO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PROFESSOR" Relationship="Self.FK__PROFESSOR__TURID__267ABA7A" FromRole="Turno" ToRole="PROFESSOR" />
+  </EntityType>
+  <Association Name="FK__PROFESSOR__TURID__267ABA7A">
+    <End Role="Turno" Type="Self.Turno" Multiplicity="0..1" />
+    <End Role="PROFESSOR" Type="Self.PROFESSOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turno">
+        <PropertyRef Name="TURID" />
+      </Principal>
+      <Dependent Role="PROFESSOR">
+        <PropertyRef Name="TURID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDConexao" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PROFESSOR" EntityType="Self.PROFESSOR" />
+    <EntitySet Name="Turno" EntityType="Self.Turno" />
+    <AssociationSet Name="FK__PROFESSOR__TURID__267ABA7A" Association="Self.FK__PROFESSOR__TURID__267ABA7A">
+      <End Role="Turno" EntitySet="Turno" />
+      <End Role="PROFESSOR" EntitySet="PROFESSOR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

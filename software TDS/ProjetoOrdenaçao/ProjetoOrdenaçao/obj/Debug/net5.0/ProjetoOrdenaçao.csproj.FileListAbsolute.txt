@@ -1,0 +1,16 @@
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\bin\Debug\net5.0\ProjetoOrdenaçao.exe
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\bin\Debug\net5.0\ProjetoOrdenaçao.deps.json
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\bin\Debug\net5.0\ProjetoOrdenaçao.runtimeconfig.json
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\bin\Debug\net5.0\ProjetoOrdenaçao.runtimeconfig.dev.json
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\bin\Debug\net5.0\ProjetoOrdenaçao.dll
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\bin\Debug\net5.0\ProjetoOrdenaçao.pdb
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.csproj.AssemblyReference.cache
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.AssemblyInfoInputs.cache
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.AssemblyInfo.cs
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.csproj.CoreCompileInputs.cache
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.dll
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\refint\ProjetoOrdenaçao.dll
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.pdb
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ProjetoOrdenaçao.genruntimeconfig.cache
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\obj\Debug\net5.0\ref\ProjetoOrdenaçao.dll

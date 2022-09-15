@@ -1,0 +1,49 @@
+﻿@model TdsAlmoxarifado.Models.PRODUTO
+
+@{
+    ViewBag.Title = "Editando";
+}
+
+<h2>Atualizando Produtos</h2>
+
+<div>
+    <form action="/Produto/Edit?id=@Model.PROID" method="post">
+
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" classe="form-crontrol"
+                   maxlength="100" id="descricao" name="descricao"
+                   value=@Model.PRODESCRICAO
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="minimo">Minimo</label>
+            <input type="number" classe="form-crontrol"
+                   id="minimo" name="minimo" value=@Model.PROMINIMO min="0"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="maximo">Maximo</label>
+            <input type="number" classe="form-crontrol"
+                   id="maximo" name="maximo" value=@Model.PROMAXIMO
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="estoque">Estoque atual</label>
+            <input type="number" classe="form-crontrol"
+                   id="estoque" name="estoque" value=@Model.PROESTOQUE min="0" max="10"
+                   required />
+        </div>
+
+        <div>
+            <a href="/Produto/Index"> <button type="button" class="btn btn-primary">Voltar</button>  </a>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+        
+
+    </form>
+</div>
+

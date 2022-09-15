@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MiniCursos.Models.Disciplinas>
+@{
+    ViewBag.Title = "DisciplinaPorCurso";
+    var nomeCurso = Model.ToList().First();
+}
+ <div class="row">
+     <h2>Disciplinas do Curso: @nomeCurso.Cursos.CURSODESCRICAO  </h2>
+ </div>
+<div class="row">
+    <table class="table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Disciplina</th>
+            <th>CH</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DISID</td>
+                <td>@item.DISDESCRIACAO</td>
+                <td>@item.DISCH</td>
+            </tr>
+        }
+    </table>
+</div>
+
+

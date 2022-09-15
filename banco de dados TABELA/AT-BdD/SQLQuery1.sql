@@ -1,0 +1,422 @@
+use atCurso;
+go
+Create table Curso( 
+  CURSOID int not null identity(1,1) primary key,
+  CURSODESCRICAO varchar (200) not null,
+  CURSOCODHABILIDADE varchar (200) not null,
+  CURSOMODALIDADE varchar (200) not null
+  )
+
+  go
+Create table Disciplina( 
+  DISID int not null identity(1,1) primary key,
+  DISDESCRIACAO varchar (200) not null,
+  CURSOID int  null,
+  DISCH int null,
+  FOREIGN KEY (CURSOID) REFERENCES Curso(CURSOID)
+  )
+
+ 
+   
+   SET IDENTITY_INSERT Curso off;  
+
+   Insert into Curso 
+   (CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+   values
+    (1,'ASSISTENTE TÉCNICO EM TECNOLOGIA DA INFORMAÇÃO','QPR-101','Qualificação Profissional');
+
+	Insert into Curso 
+   (CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+   values
+    (3,'AUXILIAR DE PADEIRO','QPR-013','Qualificação Profissional');
+
+	Insert into Curso
+	(CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+   values
+    (4,'ELETRICISTA DE REDE DE DISTRIBUICAO DE ENERGIA ELETRICAL','QPR-042','Qualificação Profissional');
+
+	Insert into Curso
+	(CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+	values
+	(5,'INFORMATICA BASICA','QPR-052','Qualificação Profissional');
+
+	Insert into Curso
+	(CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+	values
+	(7,'LOGICA DE PROGRAMACAO','INP-057','Iniciação Profissional');
+
+	Insert into Curso
+	(CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+	values
+	(9,'METROLOGIA','INP-063','Iniciação Profissional');
+
+	Insert into Curso
+	(CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+	values
+	(10,'OFICINA DE LANCHES VEGANOS','INP-092','Iniciação Profissional');
+
+	Insert into Curso
+	(CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+	values
+	(13,'TECNICO EM REDES DE COMPUTADORES','TEC-037','Habilitação Técnica de Nível Médio');
+
+	Insert into Curso
+	(CURSOID,CURSODESCRICAO,CURSOCODHABILIDADE,CURSOMODALIDADE)
+	values
+	(14,'TÉCNICO EM ADMINISTRAÇÃO','TEC-006','Habilitação Técnica de Nível Médio');
+  
+  select * from Curso
+
+
+
+
+  SET IDENTITY_INSERT Disciplina on;
+
+  Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(69,'ADMINISTRAÇÃO DE SISTEMA OPERACIONAL DE REDE ABERTA - LINUX',1);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(70,'ADMINISTRAÇÃO DE SISTEMA OPERACIONAL DE REDE PROPRIETÁRIO - WINDOWS',1);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(71,'ADMINISTRAÇÃO MERCADOLÓGICA E PROCESSOS COMERCIAIS',14);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(72,'ARQUITETURA DE REDES DE COMPUTADORES',13);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(73,'ASPECTOS COMPORTAMENTAIS E O CLIENTE',4);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(74,'CABEAMENTO ESTRUTURADO E INSTALAÇÃO DE REDES LOCAIS',1);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(75,'COMANDOS ELETRICOS',4);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(76,'COMPETENCIAS PROFISSIONAIS',13);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(77,'COMUNICAÇÃO CORPORATIVA',1);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(78,'COMUNICACAO EMPRESARIAL',14);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(79,'COMUTACAO E INTERCONEXAO DE REDES',13);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(80,'CONEXOES',4);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(81,'CONTABILIDADE COMERCIAL',14);
+
+   select * from Disciplina
+
+   Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(82,'COORDENAÇÃO DE EQUIPES',14);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(83,'DESENVOLVIMENTO DE PROJETO',14);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(84,'DOCUMENTACAO TECNICA',14);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(85,'DOCUMENTAÇÃO TÉCNICA',13);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(86,'ELETRICIDADE BASICA',4);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(87,'ELETRICISTA PADRONISTA',4);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(88,'FERRAMENTAS DE ESCRITORIO',5);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(89,'FERRAMENTAS DE ESCRITÓRIO',1);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(90,'FERRAMENTAS DE INTERNET',5);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(91,'FUNDAMENTOS DE ADMINISTRAÇÃO',14);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(92,'FUNDAMENTOS DE ELETROELETRONICA',13);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(93,'FUNDAMENTOS DE INFORMATICA',13);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(94,'FUNDAMENTOS DE NR 10',4);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(95,'FUNDAMENTOS DE SEGURANCA DO TRABALHO EM ALTURA - NR 35',4);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(96,'FUNDAMENTOS DE TECNOLOGIA DA INFORMACAO',13);
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(97,'FUNDAMENTOS DO DIREITO EMPRESARIAL');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(98,'GESTÃO AMBIENTAL E DA QUALIDADE');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(99,'GESTAO DA PRODUCAO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(100,'GESTÃO DE ATIVOS DE REDES');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(101,'GESTAO DE CUSTOS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(102,'INFORMÁTICA APLICADA');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(103,'INFRAESTRUTURA DE REDES LAN E WAN');
+
+	select * from Disciplina
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(104,'LEITURA E COMUNICAÇÃO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(105,'LOGICA DE PROGRAMACAO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(106,'MATEMÁTICA APLICADA');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(107,'METROLOGIA');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(108,'MODELO DE NEGÓCIOS DA TECNOLOGIA DA INFORMAÇÃO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(109,'MONITORAMENTO E GERENCIAMENTO DE REDES');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(110,'MONTAGEM DE REDES ELETRICAS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(111,'MONTAGEM E MANUTENÇÃO DE COMPUTADORES');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(112,'NORMAS E PROCEDIMENTOS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(113,'OPERACAO EM REDES ELETRICAS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(114,'PLANEJAMENTO DE PRODUCAO NA PANIFICACAO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(115,'PLANEJAMENTO E ORGANIZAÇÃO DO TRABALHO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(116,'PRATICA PROFISSIONAL SIMULADA');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(117,'PROCESSOS DE RECURSOS HUMANOS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(118,'RACIOCÍNIO LÓGICO E ANÁLISE DOS DADOS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(119,'REDES CONVERGENTES');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(120,'REDES OPTICAS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(121,'RELAÇÕES SÓCIO-PROFISSIONAIS, CIDADANIA E ÉTICA');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(122,'ROTINAS DE PESSOAL');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(123,'SAÚDE E SEGURANÇA DO TRABALHO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(124,'SEGURANCA DE REDES');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(125,'SEGURANÇA DE REDES DE COMPUTADORES');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(126,'SERVICOS DE REDE CORPORATIVA');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(127,'SERVICOS DE REDE LOCAL');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(128,'SERVIDORES DE REDES');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(129,'SISTEMA OPERACIONAL');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(130,'SISTEMAS OPERACIONAIS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(131,'TECNICAS DE FABRICACAO DE LANCHES VEGANOS');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(132,'TECNOLOGIA DA INFORMACAO E COMUNICACAO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(133,'TECNOLOGIA E PROCESSO NA PANIFICACAO');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(134,'TRABALHO DE CONCLUSAO DE CURSO - TCC');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(135,'TRABALHO DE CONCLUSÃO DE CURSO - TCC');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO)
+	values
+	(136,'WEB DESIGN');
+
+	Insert into Disciplina
+	(DISID,DISDESCRIACAO,CURSOID)
+	values
+	(137,'TESTE26',7);

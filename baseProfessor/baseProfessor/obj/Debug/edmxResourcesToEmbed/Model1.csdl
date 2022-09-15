@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="atCursoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Curso">
+    <Key>
+      <PropertyRef Name="CURSOID" />
+    </Key>
+    <Property Name="CURSOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CURSODESCRICAO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURSOCODHABILIDADE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURSOMODALIDADE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Disciplina" Relationship="Self.FK__Disciplin__CURSO__2C3393D0" FromRole="Curso" ToRole="Disciplina" />
+  </EntityType>
+  <EntityType Name="Disciplina">
+    <Key>
+      <PropertyRef Name="DISID" />
+    </Key>
+    <Property Name="DISID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DISDESCRIACAO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CURSOID" Type="Int32" />
+    <Property Name="DISCH" Type="Int32" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK__Disciplin__CURSO__2C3393D0" FromRole="Disciplina" ToRole="Curso" />
+  </EntityType>
+  <Association Name="FK__Disciplin__CURSO__2C3393D0">
+    <End Role="Curso" Type="Self.Curso" Multiplicity="0..1" />
+    <End Role="Disciplina" Type="Self.Disciplina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curso">
+        <PropertyRef Name="CURSOID" />
+      </Principal>
+      <Dependent Role="Disciplina">
+        <PropertyRef Name="CURSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="atCursoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Curso" EntityType="Self.Curso" />
+    <EntitySet Name="Disciplina" EntityType="Self.Disciplina" />
+    <AssociationSet Name="FK__Disciplin__CURSO__2C3393D0" Association="Self.FK__Disciplin__CURSO__2C3393D0">
+      <End Role="Curso" EntitySet="Curso" />
+      <End Role="Disciplina" EntitySet="Disciplina" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

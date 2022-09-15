@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="atCursoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Curso">
+          <Key>
+            <PropertyRef Name="CURSOID" />
+          </Key>
+          <Property Name="CURSOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CURSODESCRICAO" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CURSOCODHABILIDADE" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CURSOMODALIDADE" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Disciplina">
+          <Key>
+            <PropertyRef Name="DISID" />
+          </Key>
+          <Property Name="DISID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DISDESCRIACAO" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CURSOID" Type="int" />
+          <Property Name="DISCH" Type="int" />
+        </EntityType>
+        <Association Name="FK__Disciplin__CURSO__2C3393D0">
+          <End Role="Curso" Type="Self.Curso" Multiplicity="0..1" />
+          <End Role="Disciplina" Type="Self.Disciplina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curso">
+              <PropertyRef Name="CURSOID" />
+            </Principal>
+            <Dependent Role="Disciplina">
+              <PropertyRef Name="CURSOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="atCursoModelStoreContainer">
+          <EntitySet Name="Curso" EntityType="Self.Curso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Disciplina" EntityType="Self.Disciplina" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Disciplin__CURSO__2C3393D0" Association="Self.FK__Disciplin__CURSO__2C3393D0">
+            <End Role="Curso" EntitySet="Curso" />
+            <End Role="Disciplina" EntitySet="Disciplina" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="atCursoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Curso">
+          <Key>
+            <PropertyRef Name="CURSOID" />
+          </Key>
+          <Property Name="CURSOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CURSODESCRICAO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CURSOCODHABILIDADE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CURSOMODALIDADE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Disciplina" Relationship="Self.FK__Disciplin__CURSO__2C3393D0" FromRole="Curso" ToRole="Disciplina" />
+        </EntityType>
+        <EntityType Name="Disciplina">
+          <Key>
+            <PropertyRef Name="DISID" />
+          </Key>
+          <Property Name="DISID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DISDESCRIACAO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CURSOID" Type="Int32" />
+          <Property Name="DISCH" Type="Int32" />
+          <NavigationProperty Name="Curso" Relationship="Self.FK__Disciplin__CURSO__2C3393D0" FromRole="Disciplina" ToRole="Curso" />
+        </EntityType>
+        <Association Name="FK__Disciplin__CURSO__2C3393D0">
+          <End Role="Curso" Type="Self.Curso" Multiplicity="0..1" />
+          <End Role="Disciplina" Type="Self.Disciplina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curso">
+              <PropertyRef Name="CURSOID" />
+            </Principal>
+            <Dependent Role="Disciplina">
+              <PropertyRef Name="CURSOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="atCursoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Curso" EntityType="Self.Curso" />
+          <EntitySet Name="Disciplina" EntityType="Self.Disciplina" />
+          <AssociationSet Name="FK__Disciplin__CURSO__2C3393D0" Association="Self.FK__Disciplin__CURSO__2C3393D0">
+            <End Role="Curso" EntitySet="Curso" />
+            <End Role="Disciplina" EntitySet="Disciplina" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="atCursoModelStoreContainer" CdmEntityContainer="atCursoEntities">
+          <EntitySetMapping Name="Curso">
+            <EntityTypeMapping TypeName="atCursoModel.Curso">
+              <MappingFragment StoreEntitySet="Curso">
+                <ScalarProperty Name="CURSOID" ColumnName="CURSOID" />
+                <ScalarProperty Name="CURSODESCRICAO" ColumnName="CURSODESCRICAO" />
+                <ScalarProperty Name="CURSOCODHABILIDADE" ColumnName="CURSOCODHABILIDADE" />
+                <ScalarProperty Name="CURSOMODALIDADE" ColumnName="CURSOMODALIDADE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Disciplina">
+            <EntityTypeMapping TypeName="atCursoModel.Disciplina">
+              <MappingFragment StoreEntitySet="Disciplina">
+                <ScalarProperty Name="DISID" ColumnName="DISID" />
+                <ScalarProperty Name="DISDESCRIACAO" ColumnName="DISDESCRIACAO" />
+                <ScalarProperty Name="CURSOID" ColumnName="CURSOID" />
+                <ScalarProperty Name="DISCH" ColumnName="DISCH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

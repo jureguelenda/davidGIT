@@ -1,0 +1,6 @@
+C:\Users\android\Desktop\david\juros\investimentos\BiBlioteca\bin\Debug\BiBlioteca.dll
+C:\Users\android\Desktop\david\juros\investimentos\BiBlioteca\bin\Debug\BiBlioteca.pdb
+C:\Users\android\Desktop\david\juros\investimentos\BiBlioteca\obj\Debug\BiBlioteca.csproj.AssemblyReference.cache
+C:\Users\android\Desktop\david\juros\investimentos\BiBlioteca\obj\Debug\BiBlioteca.csproj.CoreCompileInputs.cache
+C:\Users\android\Desktop\david\juros\investimentos\BiBlioteca\obj\Debug\BiBlioteca.dll
+C:\Users\android\Desktop\david\juros\investimentos\BiBlioteca\obj\Debug\BiBlioteca.pdb

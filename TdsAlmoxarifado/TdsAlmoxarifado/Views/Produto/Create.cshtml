@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cadastro de Produtos</h2>
+
+<div>
+    <form action="/Produto/Create" method="post">
+
+
+        <div class="form-group">
+            <label for="descricao">Descricao</label>
+            <input type="text" classe="form-crontrol"
+                   maxlength="100" id="descricao" name="descricao"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="minimo">Minimo</label>
+            <input type="number" classe="form-crontrol"
+                   id="minimo" name="minimo" value="0" min="0"
+                   required />
+        </div>
+
+        <div class="form-group">
+            <label for="maximo">Maximo</label>
+            <input type="number" classe="form-crontrol"
+                   id="maximo" name="maximo" value="0"
+                    
+        </div>
+
+        <div class="form-group">
+            <label for="estoque">Estoque atual</label>
+            <input type="number" classe="form-crontrol"
+                   id="estoque" name="estoque" value="0" min="0" max="10"
+                   required />
+        </div>
+
+        <div>
+            <a href="/Produto/Index"> <button type="button" class="btn btn-primary">Voltar</button>  </a>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+        
+
+    </form>
+</div>
+

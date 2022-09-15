@@ -1,0 +1,29 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<div class="backlogin">
+    <div class="divlogin">
+        <form action="/Home/VerificarLogin" method="post">
+
+            <div class="divitems">
+                <label>Login</label>
+                <input class="inputLogin" name="login" type="text" required />
+            </div>
+
+            <div class="divitems">
+                <label>Senha:</label>
+                <input class="inputLogin" name="senha" type="password" required />
+            </div>
+
+            <div class="divitems">
+                <button class="btn btn-success btnlogin" type="submit">Logar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+

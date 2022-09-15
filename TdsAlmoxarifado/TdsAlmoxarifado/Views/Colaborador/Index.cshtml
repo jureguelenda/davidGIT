@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TdsAlmoxarifado.Models.COLABORADOR>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cadastrar Area <a href="/Colaborador/Create" class="btn bnt-success">Novo</a></h2>
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+
+            <th>
+                Codigo
+
+            </th>
+
+            <th>
+                Nome
+            </th>
+
+            <th>
+                Cargo
+            </th>
+
+            <th>
+                area
+            </th>
+
+            <th>
+                Opções
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+       @foreach (var item in Model)
+        {
+          <tr>
+
+            <td>
+                @item.COLID
+            </td>
+            <td>
+                @item.COLNOME
+            </td>
+            <td>
+                @item.COLCARGO
+            </td>
+            <td>
+                @item.AREA.ARESDESCRICAO
+            </td>
+            <td>
+                <a href="/Colaborador/Edit?id=@item.COLID" class="btn btn-warning">Editar</a>
+                <a href="/Colaborador/Exibir?id=@item.COLID" class="btn btn-primary">Exibir</a>
+                <a href="/Colaborador/Excluir?id=@item.COLID" class="btn btn-danger">Excluir</a>
+            </td>
+          </tr>
+        }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDSENAITDSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PROFESSOR">
+    <Key>
+      <PropertyRef Name="PROFID" />
+    </Key>
+    <Property Name="PROFID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PROFNOME" Type="varchar" MaxLength="100" />
+    <Property Name="TURID" Type="int" />
+  </EntityType>
+  <EntityType Name="Turno">
+    <Key>
+      <PropertyRef Name="TURID" />
+    </Key>
+    <Property Name="TURID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TURDESCRICAO" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__PROFESSOR__TURID__267ABA7A">
+    <End Role="Turno" Type="Self.Turno" Multiplicity="0..1" />
+    <End Role="PROFESSOR" Type="Self.PROFESSOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turno">
+        <PropertyRef Name="TURID" />
+      </Principal>
+      <Dependent Role="PROFESSOR">
+        <PropertyRef Name="TURID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDSENAITDSModelStoreContainer">
+    <EntitySet Name="PROFESSOR" EntityType="Self.PROFESSOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Turno" EntityType="Self.Turno" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__PROFESSOR__TURID__267ABA7A" Association="Self.FK__PROFESSOR__TURID__267ABA7A">
+      <End Role="Turno" EntitySet="Turno" />
+      <End Role="PROFESSOR" EntitySet="PROFESSOR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

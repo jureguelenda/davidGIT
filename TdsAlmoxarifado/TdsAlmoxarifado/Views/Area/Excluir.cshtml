@@ -1,0 +1,27 @@
+﻿@model TdsAlmoxarifado.Models.AREA
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluindo area</h2>
+<br />
+<div>
+    <form action="/Area/ExcluirConfirmar?id=@Model.AREID" method="post">
+
+        <div>
+            <label> Codigo:</label>
+            <label>@Model.AREID</label>
+        </div>
+
+        <div>
+            <label>Descrição</label>
+            <label>@Model.AREID</label>
+        </div>
+
+        <br />
+        <br />
+        <a href="/Area/Index" class="btn btn-primary">Voltar</a>
+        <button class="btn btn-danger" type="submit">Excluir</button>
+    </form>
+</div>
+

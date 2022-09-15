@@ -1,0 +1,51 @@
+﻿@model BDFunil.Models.VAGA
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Deletando Produtos</h2>
+
+<div>
+    <form action="/Vagas/ExcluirConfirma?id=@Model.VAIID" method="post">
+        <div class="form-group">
+            <label>id</label>
+            <label>@Model.VAIID</label>
+        </div>
+
+        <div class="form-group">
+            <label>nome</label>
+            <label>@Model.VAINOME</label>
+        </div>
+
+        <div class="form-group">
+            <label>descrição</label>
+            <label>@Model.VAIDESCRICAO</label>
+        </div>
+
+        <div class="form-group">
+            <label>atribuicao</label>
+            <label>@Model.VAIATRIBUICAO</label>
+        </div>
+
+        <div class="form-group">
+            <label>salario</label>
+            <label>@Model.VAISALARIO</label>
+        </div>
+
+        <div class="form-group">
+            <label>requisito</label>
+            <label>@Model.VAIREQUISITO</label>
+        </div>
+
+        <div class="form-group">
+            <label>data</label>
+            <label>@Model.VAIDATACADASTRO</label>
+        </div>
+
+        <div>
+            <a href="/Vagas/Index"> <button type="button" class="btn btn-primary">Voltar</button>  </a>
+            <h5>Voce deseja mesmo apagar esse arquivo?</h5>
+            <button type="submit" class="btn btn-danger">Excluir</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="carrosTeslaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Veiculo">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VALOR" Type="Int32" Nullable="false" />
+    <Property Name="CODIGMODELO" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modelo">
+    <Key>
+      <PropertyRef Name="ANO" />
+      <PropertyRef Name="DESCRICAO" />
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="ANO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODIGO" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="carrosTeslaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Veiculo" EntityType="Self.Veiculo" />
+    <EntitySet Name="Modelo" EntityType="Self.Modelo" />
+  </EntityContainer>
+</Schema>

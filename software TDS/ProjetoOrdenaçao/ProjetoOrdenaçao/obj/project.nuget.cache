@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "x579ciynJqiuYMMj4e85My6lrDjlglZA7toYwBcO1RrnXstiAbqTqheTy2sIt0kiDO0pUKbHblx/g5368NgHQQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\android\\Desktop\\david\\ProjetoOrdenaçao\\ProjetoOrdenaçao\\ProjetoOrdenaçao.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\android\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

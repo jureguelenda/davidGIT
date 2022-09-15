@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDSENAITDSModelStoreContainer" CdmEntityContainer="BDConexao">
+    <EntitySetMapping Name="PROFESSOR">
+      <EntityTypeMapping TypeName="BDSENAITDSModel.PROFESSOR">
+        <MappingFragment StoreEntitySet="PROFESSOR">
+          <ScalarProperty Name="PROFID" ColumnName="PROFID" />
+          <ScalarProperty Name="PROFNOME" ColumnName="PROFNOME" />
+          <ScalarProperty Name="TURID" ColumnName="TURID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turno">
+      <EntityTypeMapping TypeName="BDSENAITDSModel.Turno">
+        <MappingFragment StoreEntitySet="Turno">
+          <ScalarProperty Name="TURID" ColumnName="TURID" />
+          <ScalarProperty Name="TURDESCRICAO" ColumnName="TURDESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

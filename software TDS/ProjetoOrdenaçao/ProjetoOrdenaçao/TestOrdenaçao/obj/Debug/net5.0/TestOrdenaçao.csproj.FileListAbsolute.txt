@@ -1,0 +1,6 @@
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\TestOrdenaçao\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\TestOrdenaçao\obj\Debug\net5.0\TestOrdenaçao.csproj.AssemblyReference.cache
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\TestOrdenaçao\obj\Debug\net5.0\TestOrdenaçao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\TestOrdenaçao\obj\Debug\net5.0\TestOrdenaçao.AssemblyInfoInputs.cache
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\TestOrdenaçao\obj\Debug\net5.0\TestOrdenaçao.AssemblyInfo.cs
+C:\Users\android\Desktop\david\ProjetoOrdenaçao\ProjetoOrdenaçao\TestOrdenaçao\obj\Debug\net5.0\TestOrdenaçao.csproj.CoreCompileInputs.cache
